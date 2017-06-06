@@ -22,7 +22,7 @@ const DICTIONARY = {
 
 
 
-module.exports = class GitRemoteSemver {
+module.exports = class {
 
 	static getVersions(url) {
 		return new Promise((resolve) => {
