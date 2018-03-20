@@ -1,6 +1,6 @@
 {
   "name": "@absolunet/git-remote-semver",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Git remote tags semver",
   "definition": "",
   "homepage": "https://github.com/absolunet/node-git-remote-semver",
@@ -17,18 +17,19 @@
     "url": "https://github.com/absolunet/node-git-remote-semver/issues"
   },
   "engines": {
-    "node": ">= 8.5.0"
+    "node": ">= 9.8.0"
   },
   "scripts": {
     "test": "ava test"
   },
   "devDependencies": {
-    "@absolunet/tester": "1.1.0"
+    "@absolunet/tester": "1.4.0"
   },
   "dependencies": {
-    "boxen": "^1.2.1",
-    "chalk": "^2.1.0",
-    "semver": "^5.4.1",
+    "boxen": "^1.3.0",
+    "configstore": "^3.1.1",
+    "chalk": "^2.3.2",
+    "semver": "^5.5.0",
     "to-semver": "^1.1.0"
   }
 }

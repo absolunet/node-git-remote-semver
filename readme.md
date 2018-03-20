@@ -37,6 +37,18 @@ gitRemoteSemver.needUpdate('git@github.com:absolunet/node-git-remote-semver.git'
 
 ## API
 
+### configstore(name)
+
+Returns an [configstore](https://www.npmjs.com/package/configstore) `Object`.
+
+#### name
+
+*Required*  
+Type: `string`  
+
+Id for the configstore
+
+
 ### getVersions(url)
 
 `Promise` returns an `Array` of valid, sorted, and cleaned semver tags.
@@ -100,6 +112,46 @@ Current semver version.
 *Required*  
 Type: `string`<br>
 Latest semver version.
+
+##### lang
+
+Type: `string`<br>
+Default: 'en'<br>
+Language to use for notification (fr/en).
+
+##### msg
+
+Type: `string`<br>
+Additional message for the notification.
+
+
+### obnoxiousNotification(options)
+
+Check for updates unobtrusively and outputs a [update-notifier](https://www.npmjs.com/package/update-notifier) style notification if an update is available.
+
+#### options
+
+*Required*  
+Type: `Object`
+
+##### url
+
+*Required*  
+Type: `string`<br>
+The [remote git url](https://git-scm.com/docs/git-fetch#_git_urls_a_id_urls_a)
+
+
+##### current
+
+*Required*  
+Type: `string`<br>
+Current semver version.
+
+##### name
+
+*Required*  
+Type: `string`<br>
+Id for the configstore.
 
 ##### lang
 
