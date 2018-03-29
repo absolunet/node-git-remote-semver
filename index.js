@@ -82,18 +82,24 @@ module.exports = class {
 		if (conf.has('obnoxious')) {
 			const infos = conf.get('obnoxious');
 
-			// If update is available tell it
-			if (semver.gt(infos.version, current)) {
+			if (semver.valid(infos.version)) {
 
-				// eslint-disable-next-line no-console
-				console.log(`\n${
-					this.updateNotification({
-						current: current,
-						latest:  infos.version,
-						lang:    lang,
-						msg:     msg
-					})
-				}`);
+				// If update is available tell it
+				if (semver.gt(infos.version, current)) {
+
+					// eslint-disable-next-line no-console
+					console.log(`\n${
+						this.updateNotification({
+							current: current,
+							latest:  infos.version,
+							lang:    lang,
+							msg:     msg
+						})
+					}`);
+				}
+
+			} else {
+				conf.delete('obnoxious');
 			}
 		}
 
